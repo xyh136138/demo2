@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        <button @click="count++">click</button>
+        <button @click="fn()">click</button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        let vm=new Vue({
+            el:"#app",
+            data:{
+                msg:'hello',
+                prolist:[]
+            },
+            beforeCreate(){
+                console.log(this.$el,this.$data);
+            },
+            created(){
+                console.log(this.$el,this.$data);
+            },
+            beforeMount(){
+                console.log(this.$el,this.$data);
+            },
+            mounted(){
+                console.log(this.$el,this.$data);
+            },
+            beforeUpdate(){
+                console.log("beforeUpdate");
+            },
+            unpdated(){
+                console.log("updated");
+            },
+            beforeDestroy(){
+                console.log("beforeDestroy")
+            },
+
+        })
+    </script>
+</body>
+</html>

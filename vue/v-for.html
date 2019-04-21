@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        <div v-for="(item,index) in arr">
+            {{item}}{{index}}
+        </div>
+        <div v-for="user in list">
+            {{user.name}},{{user,age}}
+        </div>
+
+
+
+    </div>
+    <script src="./vue.js"> </script>
+    <script>
+        const vm=new Vue({
+            el:'#app',
+            data:{
+                msg:'hello',
+                arr:['html','css','javascript'],
+                list:[
+                    {
+                        name:'zs',
+                        age:18
+                    },{
+                        name='1',
+                        age=2
+                    },{
+                        name='ds',
+                        age=5
+                    }
+                ],
+                dog:{
+                    name='xiaobai',
+                    age='4'
+                }
+            },
+            computed:{
+                listSort(){
+                    return this.listSort
+                }
+            }
+        });
+    </script>
+</body>
+</html>
